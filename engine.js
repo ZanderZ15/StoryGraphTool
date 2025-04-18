@@ -24,8 +24,21 @@ class Engine {
     }
 
     gotoScene(sceneClass, data) {
+        if (data == "Bed") {
+            small_key = true;
+        } else if (data == "Big Key") {
+            big_key = true;
+        } else if (data == "Pressed Button") {
+            butt = true;
+        } else if (data == "Small Looted") {
+            smalloot = true;
+        } else if (data == "Treasure Room") {
+            guardian += 1;
+            console.log(guardian);  
+        }
         this.scene = new sceneClass(this);
         this.scene.create(data);
+        document.getElementById("quick-start-container").scrollIntoView();
     }
 
     addChoice(action, data) {
@@ -49,11 +62,22 @@ class Engine {
         div.innerHTML = msg;
         this.output.appendChild(div);
     }
+
 }
 
 class Scene {
     constructor(engine) {
         this.engine = engine;
+        engine.windcor = false;
+        engine.key1 = false;
+        engine.key2 = false;
+        engine.butt = false;
+        engine.guardian = 0;
+        engine.smalloot = false;
+    }
+
+    wind() {
+        x;
     }
 
     create() { }
@@ -64,3 +88,16 @@ class Scene {
         console.warn('no choice handler on scene ', this);
     }
 }
+/*"ExampleTarget": {
+            "Body": "ExampleText.",
+            "Choices": [
+                {
+                    "Text": "EX",
+                    "Target": "EX"
+                },
+                {
+                    "Text": "EX",
+                    "Target": "EX"
+                }
+            ]
+        },*/

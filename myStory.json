@@ -1,58 +1,199 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "\"Secret Minecraft Base\"",
+    "Credits": "Made by Zander Miller-Brown (amillerb@ucsc.edu).",
+    "InitialLocation": "Outside",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "Outside": {
+            "Body": "You arrive at the entrance of a cave.",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
+                    "Text": "Enter",
+                    "Target": "Main Hall"
+                }, 
+                {
+                    "Text": "Go Home",
+                    "Target": "End Screen"
                 }
+                
             ]
+
         },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
+        "Main Hall": {
+            "Body": "You seem to be in a large chamber.<br>On your left there looks to be a long corridor.<br>In front of you stands a large door that requires a large key.<br>On your right is a doorway that leads to another room.",
             "Choices": [
+                
                 {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "Left",
+                    "Target": "Winding Corridor"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
-                }
-            ]
-        },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "Straight",
+                    "Target": "Treasure Room"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
-                }
-            ]
-        },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
+                    "Text": "Right",
+                    "Target": "Cluttered Room"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "Leave",
+                    "Target": "End Screen"
                 }
             ]
         },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+        "Winding Corridor": {
+            "Body": "This is the left corridor.",
+            "Choices": [
+                {
+                    "Text": "Enter the Trapdoor",
+                    "Target": "Small Cellar"
+                },
+                {
+                    "Text": "Continue",
+                    "Target": "Small Loot"
+                },
+                {
+                    "Text": "Go back",
+                    "Target": "Main Hall"
+                }
+            ]
+        },
+        "Small Cellar": {
+            "Body": "You descend downward and reach a small cellar. <br>You are confronted by a podium.<br>Atop the podium sits a large key.",
+            "Choices": [
+                
+                {
+                    "Text": "Take the key",
+                    "Target": "Big Key"
+                },
+                {
+                    "Text": "Go back",
+                    "Target": "Winding Corridor"
+                }
+            ]
+        },
+        "Big Key": {
+            "Body": "You take the key and return to the Corridor. ",
+            "Choices": [
+                {
+                    "Text": "Continue",
+                    "Target": "Winding Corridor"
+                }
+            ]
+        },
+        "Small Loot": {
+            "Body": "You exit the corridor on the other side, you think...<br>it all just stopped abruptly and leaves you standing in front of a small chest.",
+            "Choices": [
+                {
+                    "Text": "Open it",
+                    "Target": "Small Looted"
+                },
+                {
+                    "Text": "Go back",
+                    "Target": "Winding Corridor"
+                }
+            ]
+        },
+        "Small Looted": {
+            "Body": "You open the chest and find a small amount of loot.",
+            "Choices": [
+                {
+                    "Text": "Leave",
+                    "Target": "Winding Corridor"
+                }
+            ]
+        },
+        "Cluttered Room": {
+            "Body": "You are in a room filled with a ton of random things, but three things stand out to you.<br>In the corner of the room is a messy bed. Along the far wall, there is a rather large pile of clothes.<br>Along the wall closest to you stands a bookshelf, it looks unusually tidy for the room that it's in.<br>You decide to...",
+            "Choices": [
+                {
+                    "Text": "check the bed",
+                    "Target": "Bed"
+                },
+                {
+                    "Text": "check the clothes",
+                    "Target": "Clothes Pile"
+                },
+                {
+                    "Text": "check the bookcase",
+                    "Target": "Bookcase"
+                },
+                {
+                    "Text": "Leave",
+                    "Target": "Main Hall"
+                }
+            ]
+        },
+        "Bed": {
+            "Body": "You rip aside the sheets and find a small key under the pillow.",
+            "Choices": [
+                {
+                    "Text": "Take the key",
+                    "Target": "Cluttered Room"
+                }
+            ]
+        },
+        "Clothes Pile": {
+            "Body": "You rummage through the clothes, throwing them over your head.<br>You dont find anything useful and are fairly sure non of those clothes were clean.",
+            "Choices": [
+                {
+                    "Text": "...",
+                    "Target": "Cluttered Room"
+                }
+            ]
+        },
+        "Bookcase": {
+            "Body": "You glide over to the bookcase.<br>Looking carefully over each book, you notice a few books that seem like they have been read more than the others.",
+            "Choices": [
+                {
+                    "Text": "Take them down",
+                    "Target": "Books"
+                }
+            ]
+        },
+        "Books": {
+            "Body": "In your hands, the books' titles read \"The Legend of Herobrine\",<br>\"The Works of Mumbo\", and \"The Trials of Technoblade\".",
+            "Choices": [
+                {
+                    "Text": "Inspect",
+                    "Target": "Secret Button"
+                }
+            ]
+        },
+        "Secret Button": {
+            "Body": "You turn them over and look them through. There's nothing of note in them, <br>in fact the pages look as if the books were brand new.<br>Your hopes falling, you begin to place the books back. <br>At the last second you notice a small button in the back of the case.",
+            "Choices": [
+                {
+                    "Text": "Press it",
+                    "Target": "Pressed Button"
+                }
+            ]
+        },
+        "Pressed Button": {
+            "Body": "You press the button and wait anxiously. Nothing seems to happen.",
+            "Choices": [
+                {
+                    "Text": "Okay?",
+                    "Target": "Cluttered Room"
+                }
+            ]
+        },
+        "Treasure Room": {
+            "Body": "You are in a massive room filled floor to ceiling.",
+            "Kitty_0": "The cat pays you no mind",
+            "Kitty_1": "The cat has noticed you",
+            "Kitty_2": "The cat is watching you.",
+            "Kitty_3": "You hear the cat breathing heavier, almost anxiously.",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "Main Hall"
+                }
+            ]
+        },
+        "End Screen": {
+            "Body": "You head home, content with your adventure.",
+            "Choices": []
+            
         }
     }
 }
