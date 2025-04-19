@@ -1,6 +1,6 @@
 {
-    "Title": "\"Secret Minecraft Base\"",
-    "Credits": "Made by Zander Miller-Brown (amillerb@ucsc.edu).",
+    "Title": "Zandy's Chamber of Secrets",
+    "Credits": "Made by Zander Miller-Brown (amillerb@ucsc.edu).<br>Quality control by Evan Oxman (eoxman@ucsc.edu).",
     "InitialLocation": "Outside",
     "Locations": {
         "Outside": {
@@ -19,7 +19,7 @@
 
         },
         "Main Hall": {
-            "Body": "You seem to be in a large chamber.<br>On your left there looks to be a long corridor.<br>In front of you stands a large door that requires a large key.<br>On your right is a doorway that leads to another room.",
+            "Body": "You seem to be in a large chamber.<br>On your left there looks to be a long, dark corridor.<br>In front of you stands a large door that requires a large key.<br>On your right is a doorway that leads to another room.",
             "Choices": [
                 
                 {
@@ -133,7 +133,7 @@
             ]
         },
         "Clothes Pile": {
-            "Body": "You rummage through the clothes, throwing them over your head.<br>You dont find anything useful and are fairly sure non of those clothes were clean.",
+            "Body": "You rummage through the clothes, throwing them over your head.<br>You dont find anything useful and are fairly sure none of those clothes were clean.",
             "Choices": [
                 {
                     "Text": "...",
@@ -178,15 +178,94 @@
             ]
         },
         "Treasure Room": {
-            "Body": "You are in a massive room filled floor to ceiling.",
-            "Kitty_0": "The cat pays you no mind",
-            "Kitty_1": "The cat has noticed you",
-            "Kitty_2": "The cat is watching you.",
-            "Kitty_3": "You hear the cat breathing heavier, almost anxiously.",
+            "Body": "You are in the treasure room.",
+            "FirstEntry": "The room is massive and filled floor to ceiling with piles of gold,<br>jewels, priceless paintings, artifacts, diamonds, and strong looking weapons.<br>You take a step forward before noticing a giant 2 headed cat in the middle of the room.",
+            "Kitty": ["It seems to be ignoring your presence for the moment.", 
+            "The cat is shifting around. It might have noticed you.",
+            "You glance at the cat and see that it is watching you.",
+            "You hear the cat breathing heavier, almost anxiously."],
             "Choices": [
                 {
-                    "Text": "Go back",
+                    "Text": "take some gold",
+                    "Target": "Gold"
+                },
+                {
+                    "Text": "take some jewels",
+                    "Target": "Jewels"
+                },
+                {
+                    "Text": "take some paintings",
+                    "Target": "Paintings"
+                },
+                {
+                    "Text": "take some artifacts",
+                    "Target": "Artifacts"
+                },
+                {
+                    "Text": "take some diamonds",
+                    "Target": "Diamonds"
+                },
+                {
+                    "Text": "take some weapons",
+                    "Target": "Weapons"
+                },
+                {
+                    "Text": "leave the treasure room",
                     "Target": "Main Hall"
+                }
+            ]
+        },
+        "Gold": {
+            "Body": "You stuff some gold bars in your pocket and continue on.",
+            "Choices":[
+                {
+                    "Text": "Return",
+                    "Target": "Treasure Room"
+                }
+            ]
+        },
+        "Jewels": {
+            "Body": "You grab a couple of handlfulls of multicolored jewels to go.",
+            "Choices":[
+                {
+                    "Text": "Return",
+                    "Target": "Treasure Room"
+                }
+            ]
+        },
+        "Paintings": {
+            "Body": "You grab a couple of paintings off the walls.",
+            "Choices":[
+                {
+                    "Text": "Return",
+                    "Target": "Treasure Room"
+                }
+            ]
+        },
+        "Artifacts": {
+            "Body": "There's some interesting looking items here, you're sure something's valuable here.",
+            "Choices":[
+                {
+                    "Text": "Return",
+                    "Target": "Treasure Room"
+                }
+            ]
+        },
+        "Diamonds": {
+            "Body": "Good old diamonds, you're definitly taking some of these.",
+            "Choices":[
+                {
+                    "Text": "Return",
+                    "Target": "Treasure Room"
+                }
+            ]
+        },
+        "Weapons": {
+            "Body": "There's some dangerous looking things here. You settle on a sharp axe and a mighty bow.",
+            "Choices":[
+                {
+                    "Text": "Return",
+                    "Target": "Treasure Room"
                 }
             ]
         },

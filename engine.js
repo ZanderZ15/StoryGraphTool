@@ -32,10 +32,7 @@ class Engine {
             butt = true;
         } else if (data == "Small Looted") {
             smalloot = true;
-        } else if (data == "Treasure Room") {
-            guardian += 1;
-            console.log(guardian);  
-        }
+        } 
         this.scene = new sceneClass(this);
         this.scene.create(data);
         document.getElementById("quick-start-container").scrollIntoView();
@@ -88,16 +85,3 @@ class Scene {
         console.warn('no choice handler on scene ', this);
     }
 }
-/*"ExampleTarget": {
-            "Body": "ExampleText.",
-            "Choices": [
-                {
-                    "Text": "EX",
-                    "Target": "EX"
-                },
-                {
-                    "Text": "EX",
-                    "Target": "EX"
-                }
-            ]
-        },*/
